@@ -92,7 +92,7 @@ class CommonAverageSaleTest:
                 "priority": "1",
             }
         )
-        # TODO: Check why this is necessary - it's in materialzed view query
+        # TODO: Check why this is necessary - it's in materialized view query
         move.priority = "1"
         return move
 

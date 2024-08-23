@@ -4,4 +4,5 @@
 <odoo noupdate="1">
 
     <function model="stock.average.daily.sale.demo" name="_action_create_data" />
+
 </odoo>

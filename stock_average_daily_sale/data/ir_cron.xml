@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo noupdate="1">
+
     <record forcecreate="True" id="refresh_materialized_view" model="ir.cron">
         <field name="name">Refresh average daily sales materialized view</field>
         <field name="active" eval="True" />

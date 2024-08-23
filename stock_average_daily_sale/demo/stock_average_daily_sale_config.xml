@@ -2,6 +2,7 @@
 <!-- Copyright 2021 ACSONE SA/NV
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo noupdate="1">
+
     <record
         model="stock.average.daily.sale.config"
         id="stock_average_daily_sale_config_level_a"
@@ -17,6 +18,7 @@
         <field name="safety_factor">0.3</field>
         <field name="number_days_qty_in_stock">2</field>
     </record>
+
     <record
         model="stock.average.daily.sale.config"
         id="stock_average_daily_sale_config_level_b"
@@ -32,6 +34,7 @@
         <field name="safety_factor">0.3</field>
         <field name="number_days_qty_in_stock">2</field>
     </record>
+
     <record
         model="stock.average.daily.sale.config"
         id="stock_average_daily_sale_config_level_c"
@@ -47,4 +50,5 @@
         <field name="safety_factor">0.3</field>
         <field name="number_days_qty_in_stock">2</field>
     </record>
+
 </odoo>
