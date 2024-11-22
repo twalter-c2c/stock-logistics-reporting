@@ -224,7 +224,7 @@ class StockAverageDailySale(models.Model):
                         AND sl_dest.usage in ('customer', 'production')
                         AND sm.date BETWEEN cfg.date_from AND cfg.date_to
                         AND sm.state = 'done'
-                        AND sm.warehouse_id = cfg.warehouse_id
+                        AND coalesce(sm.warehouse_id, sl_src.warehouse_id) = cfg.warehouse_id
                     WINDOW pid AS (PARTITION BY sm.product_id, sm.warehouse_id)
                 ),
 
