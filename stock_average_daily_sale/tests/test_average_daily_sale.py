@@ -6,7 +6,7 @@ import logging
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo.fields import Date
+from odoo.fields import Date, Datetime
 from odoo.tests.common import SavepointCase
 
 from .common import CommonAverageSaleTest
@@ -37,7 +37,9 @@ class TestAverageSale(CommonAverageSaleTest, SavepointCase):
             move._action_assign()
             move.quantity_done = move.product_uom_qty
             move._action_done()
-        move_2_date = Date.to_string(self.now - relativedelta(weeks=9))
+        # `now` is today at midnight, checking move with `now - 1 second` datetime
+        # to ensure that all moves from yesterday are included in the calculation
+        move_2_date = Datetime.to_string(self.now - relativedelta(seconds=1))
         with freeze_time(move_2_date):
             move = self._create_move(self.product_2, self.location_bin_2, 12.0)
             move._action_confirm()

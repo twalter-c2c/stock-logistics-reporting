@@ -168,8 +168,9 @@ class StockAverageDailySale(models.Model):
                 WITH cfg AS (
                     SELECT
                         *,
-                        -- end of the analyzed period
-                        NOW()::date - '1 day'::interval as date_to,
+                        -- end of the analyzed period; NOW() as a date is today at midnight so to include all moves
+                        -- from yesterday, moves with date up to `NOW - 1 second` should be included
+                        NOW()::date - '1 second'::interval as date_to,
                         -- start of the analyzed period computed from the original cfg
                         (NOW() - (period_value::TEXT || ' ' || period_name::TEXT)::INTERVAL):: date as date_from,
                         -- the number of days between start and end computed by
