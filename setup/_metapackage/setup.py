@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo14-addon-delivery_line_sale_line_position',
         'odoo14-addon-stock_account_quantity_history_location',
         'odoo14-addon-stock_account_valuation_report',
+        'odoo14-addon-stock_average_daily_sale',
         'odoo14-addon-stock_card_report',
         'odoo14-addon-stock_inventory_valuation_pivot',
         'odoo14-addon-stock_inventory_valuation_report',
