@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,7 +20,6 @@ msgid "Abc Classification Level"
 msgstr ""
 
 #. module: stock_average_daily_sale
-#. odoo-python
 #: code:addons/stock_average_daily_sale/models/stock_average_daily_sale_config.py:0
 #: model:ir.model.constraint,message:stock_average_daily_sale.constraint_stock_average_daily_sale_config_abc_classification_level_unique
 #, python-format
@@ -113,6 +112,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale__display_name
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale_config__display_name
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale_demo__display_name
+#: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_warehouse__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -142,6 +142,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale__id
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale_config__id
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale_demo__id
+#: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_warehouse__id
 msgid "ID"
 msgstr ""
 
@@ -149,6 +150,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale____last_update
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale_config____last_update
 #: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_average_daily_sale_demo____last_update
+#: model:ir.model.fields,field_description:stock_average_daily_sale.field_stock_warehouse____last_update
 msgid "Last Modified on"
 msgstr ""
 
@@ -238,6 +240,7 @@ msgstr ""
 #. module: stock_average_daily_sale
 #: model:ir.actions.server,name:stock_average_daily_sale.refresh_materialized_view_ir_actions_server
 #: model:ir.cron,cron_name:stock_average_daily_sale.refresh_materialized_view
+#: model:ir.cron,name:stock_average_daily_sale.refresh_materialized_view
 msgid "Refresh average daily sales materialized view"
 msgstr ""
 
@@ -288,7 +291,6 @@ msgid "Stock Average Daily Sale Configuration"
 msgstr ""
 
 #. module: stock_average_daily_sale
-#. odoo-python
 #: code:addons/stock_average_daily_sale/models/stock_average_daily_sale.py:0
 #, python-format
 msgid "The materialized view has not been populated. Launch the cron."
@@ -348,7 +350,6 @@ msgid "Years"
 msgstr ""
 
 #. module: stock_average_daily_sale
-#. odoo-python
 #: code:addons/stock_average_daily_sale/wizards/stock_average_daily_sale_demo.py:0
 #, python-format
 msgid "You cannot call the _action_create_data() on production database."
